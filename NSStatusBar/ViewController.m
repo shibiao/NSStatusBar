@@ -12,7 +12,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, YES).firstObject;
+    NSArray *picsArr = [[NSFileManager defaultManager]contentsOfDirectoryAtPath:path error:nil];
+    NSLog(@"%@",picsArr);
     // Do any additional setup after loading the view.
 }
 
